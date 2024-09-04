@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mY WebSItE</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+        darkMode: "class",
+    };
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <style>
+        .box{
+            width: 250px;
+            height: 390px;
+        }
+        .box-part{
+            height: 350px;
+            width: 100%;
+        }
+    body::-webkit-scrollbar,.anime::-webkit-scrollbar{
+        display: none;
+    }
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        .r {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 16px;
+            margin-right: 2px;
+            text-decoration: none;
+            border-radius: 1rem;
+            font-size: larger;
+        }
+
+        li a:hover {
+            background-color: #64B5F6;
+        }
+        .snowflake {
+        color: #fff;
+        font-size: 3em;
+        border-radius: 100%;
+        text-shadow: 0 0 1px #000;
+      }
+      @-webkit-keyframes snowflakes-fall {
+        0% {
+          top: -10%;
+        }
+        100% {
+          top: 100%;
+        }
+      }
+      @-webkit-keyframes snowflakes-shake {
+        0% {
+          -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+        }
+        50% {
+          -webkit-transform: translateX(80px);
+          transform: translateX(80px);
+        }
+        100% {
+          -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+        }
+      }
+      @keyframes snowflakes-fall {
+        0% {
+          top: -10%;
+        }
+        100% {
+          top: 100%;
+        }
+      }
+      @keyframes snowflakes-shake {
+        0% {
+          transform: translateX(0px);
+        }
+        50% {
+          transform: translateX(80px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+      .snowflake {
+        position: fixed;
+        display: block;
+        top: -10%;
+        z-index: 9999;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: default;
+        -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+        -webkit-animation-duration: 10s, 3s;
+        -webkit-animation-timing-function: linear, ease-in-out;
+        -webkit-animation-iteration-count: infinite, infinite;
+        -webkit-animation-play-state: running, running;
+        animation-name: snowflakes-fall, snowflakes-shake;
+        animation-duration: 10s, 3s;
+        animation-timing-function: linear, ease-in-out;
+        animation-iteration-count: infinite, infinite;
+        animation-play-state: running, running;
+      }
+      .snowflake:nth-of-type(0) {
+        left: 1%;
+        -webkit-animation-delay: 0s, 0s;
+        animation-delay: 0s, 0s;
+      }
+      .snowflake:nth-of-type(1) {
+        left: 10%;
+        -webkit-animation-delay: 1s, 1s;
+        animation-delay: 1s, 1s;
+      }
+      .snowflake:nth-of-type(2) {
+        left: 20%;
+        -webkit-animation-delay: 6s, 0.5s;
+        animation-delay: 6s, 0.5s;
+      }
+      .snowflake:nth-of-type(3) {
+        left: 30%;
+        -webkit-animation-delay: 4s, 2s;
+        animation-delay: 4s, 2s;
+      }
+      .snowflake:nth-of-type(4) {
+        left: 40%;
+        -webkit-animation-delay: 2s, 2s;
+        animation-delay: 2s, 2s;
+      }
+      .snowflake:nth-of-type(5) {
+        left: 50%;
+        -webkit-animation-delay: 8s, 3s;
+        animation-delay: 8s, 3s;
+      }
+      .snowflake:nth-of-type(6) {
+        left: 60%;
+        -webkit-animation-delay: 6s, 2s;
+        animation-delay: 6s, 2s;
+      }
+      .snowflake:nth-of-type(7) {
+        left: 70%;
+        -webkit-animation-delay: 2.5s, 1s;
+        animation-delay: 2.5s, 1s;
+      }
+      .snowflake:nth-of-type(8) {
+        left: 80%;
+        -webkit-animation-delay: 1s, 0s;
+        animation-delay: 1s, 0s;
+      }
+      .snowflake:nth-of-type(9) {
+        left: 90%;
+        -webkit-animation-delay: 3s, 1.5s;
+        animation-delay: 3s, 1.5s;
+      }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-slate-900">
+
+    <div id="upward" class="fixed right-0 bottom-0 z-10 bg-yellow-300 rounded-full mr-3 mb-3 p-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+            <path d="M13 7.83V20h-2V7.83L5.64 13.19 4.22 11.78 12 4l7.78 7.78-1.41 1.41L13 7.83z"/>
+        </svg>
+    </div>
+    
+    <div class="snowflakes hidden" aria-hidden="true">
+        <div class="snowflake">.</div>
+        <div class="snowflake">.</div>
+        <div class="snowflake">.</div>
+        <div class="snowflake">.</div>
+        <div class="snowflake">.</div>
+        <div class="snowflake">.</div>
+        <div class="snowflake">.</div>
+        <div class="snowflake">.</div>
+        <div class="snowflake">.</div>
+        <div class="snowflake">.</div>
+    </div>
+
+    <div class="navbar shadow-xl">
+        <ul class="bg-white dark:bg-slate-900">
+            <li><img class="w-[170px] h-[70px]" src="logo2.png" alt="img"></li>
+            <li id="theme-toggle" class="r"><a class="text-slate-900 hover:text-white dark:text-white dark:hover:text-slate-900" href="#"><i id="moon" class="ri-moon-line"></i></a></li>
+            <li id="snowflake-flag" class="r"><a class="text-slate-900 hover:text-white dark:text-white dark:hover:text-slate-900" href="#"><i class="ri-snowy-fill"></i></a></li>
+            <li class="r"><a class="text-slate-900 hover:text-white dark:text-white dark:hover:text-slate-900" href="#footer">Contact</a></li>
+            <li class="r"><a class="text-slate-900 hover:text-white dark:text-white dark:hover:text-slate-900" href="#News">News</a></li>
+            <li class="r"><a class="text-slate-900 hover:text-white dark:text-white dark:hover:text-slate-900" href="#">MyList</a></li>
+            <li class="r"><a class="text-slate-900 hover:text-white dark:text-white dark:hover:text-slate-900" href="#">Home</a></li>
+            <li class="r p-[16px]"><input id="searchInput" class="p-1 pl-2 rounded-md hover:bg-slate-100 border border-slate-900" type="text" placeholder="Search Name Here"></li>
+        </ul>
+    </div>
+
+    <div class="info">
+
+        <div class="text-slate-900 dark:text-white text-[1.5rem] p-2">Anime</div>
+        <div class="anime flex overflow-x-scroll gap-2">
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/OP.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        One Piece
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/AOT.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Attack on Titan
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/HP.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Hell's Paradise
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/JJK.jpg.webp">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Jujutsu Kaisen
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/TG.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Tokyo Ghoul
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/DBZ.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Dragon Ball Z
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/DN.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Death Note
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/DS.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Demon Slayer
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/FMA.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Fullmetal Alchemist
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/N.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Naruto
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/OPM.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        One Punch Man
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./anime/VS.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Vinland Saga
+                </a>
+            </div>
+            
+            
+        </div>
+
+        <div class="anime text-slate-900 dark:text-white text-[1.5rem] p-2">Manga</div>
+        <div class="anime flex overflow-x-scroll gap-2">
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./manga/BERSERK.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Berserk
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./manga/BOYS.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        20th Century Boys
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./manga/VB.jpeg.webp">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Vegabond
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./manga/MONSTER.jpg.webp">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Monster
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./manga/SL.png">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Solo Leveling
+                    </p>
+                </a>
+            </div>
+    
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./manga/OP.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        One Piece
+                    </p>
+                </a>
+            </div>
+    
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./manga/OPM.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        One Punch Man
+                    </p>
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="anime text-slate-900 dark:text-white text-[1.5rem] p-2">Movie</div>
+        <div class="anime flex overflow-x-scroll gap-2">
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./movie/YN.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Your Name
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./movie/5.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        5cm Per Second
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./movie/BH.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Boy And Heron
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./movie/SV.jpg">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        Silent Voice
+                    </p>
+                </a>
+            </div>
+
+            <div class="box ml-2 hover:scale-[.98] duration-500 flex-shrink-0">
+                <a href="">
+                    <img class="box-part rounded-sm" src="./movie/Z.jpg.webp">
+                    <p class="text-center text-slate-900 mt-1 dark:text-white ">
+                        JJK Zero
+                    </p>
+                </a>
+            </div>
+
+
+        </div>
+          
+    </div>
+
+    <div id="News" class="News mt-1 pt-3">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="n1">
+                        <a target="_blank" href="https://www.crunchyroll.com/news/latest">
+                            <img src="./news/n1.png" width="100%" height="400px">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="n2">
+                        <a target="_blank" href="https://www.crunchyroll.com/news/latest">
+                            <img src="./news/n2.png" width="100%" height="400px">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="n3">
+                        <a target="_blank" href="https://www.crunchyroll.com/news/latest">
+                            <img src="./news/n3.png" width="100%" height="400px">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="n4">
+                        <a target="_blank" href="https://www.crunchyroll.com/news/latest">
+                            <img src="./news/n4.png" width="100%" height="400px">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="n4">
+                        <a target="_blank" href="https://www.crunchyroll.com/news/latest">
+                            <img src="./news/n5.png" width="100%" height="400px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+              spaceBetween: 1,
+              centeredSlides: true,
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            });
+          </script>
+    </div>
+
+    <div id="footer"class="footer bg-slate-300 dark:bg-slate-800 mt-1 pt-12 rounded-md">
+        <div class="grid grid-cols-2 md:grid-cols-3 place-items-center">
+            <div class="f1">
+                <div class="main text-[1.6rem] text-slate-900 dark:text-white p-2">Company</div>
+                <div class="inside text-[1.1rem] text-slate-700 dark:text-slate-300 p-2">
+                    <div>about us</div>
+                    <div>our services</div>
+                    <div>privacy policy</div>
+                </div>
+            </div>
+            <div class="f2">
+                <div class="main text-[1.6rem] text-slate-900 dark:text-white p-2">Get Help</div>
+                <div class="inside text-[1.1rem] text-slate-700 dark:text-slate-300 p-2">
+                    <div>FAQ</div>
+                    <div>services</div>
+                    <div>Contact</div>
+                </div>
+            </div>
+            <div class="f3">
+                <div class="main text-[1.6rem] text-slate-900 dark:text-white p-2">Follow Us</div>
+                <div class="inside text-[1.1rem] text-slate-700 dark:text-slate-300 p-2 flex flex-wrap">
+                    <div class="p-1 pl-0"><img src="./icon/fb.svg" alt="" width="30px"></div>
+                    <div class="p-1 pl-0"><img src="./icon/insta.svg" alt="" width="30px"></div>
+                    <div class="p-1 pl-0"><img src="./icon/other.svg" alt="" width="30px"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-screen pt-2">
+            <marquee class="text-slate-700 dark:text-slate-300">©22BCE337</marquee>
+        </div>
+    </div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
