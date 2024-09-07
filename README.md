@@ -4,18 +4,18 @@
 This is a web project that includes an interactive website featuring different categories such as anime, manga, and movies. The site utilizes responsive design, features a dark mode toggle, and incorporates an autoplaying Swiper slider for news content.
 
 ## Features
-- **Dark Mode:** Users can toggle between light and dark themes.
-- **Snowflake Animation:** A fun snowflake animation can be toggled on or off.
-- **Swiper Slider:** A carousel slider for displaying the latest news.
-- **Anime, Manga, and Movie Listings:** Lists for various categories like anime, manga, and movies with hover effects.
-- **Custom Search:** A search bar is included for finding items by name.
+- <span style="color:lightblue">**Dark Mode:**</span> Users can toggle between light and dark themes.
+- <span style="color:lightblue">**Snowflake Animation:**</span> A fun snowflake animation can be toggled on or off.
+- <span style="color:lightblue">**Swiper Slider:**</span> A carousel slider for displaying the latest news.
+- <span style="color:lightblue">**Anime, Manga, and Movie Listings:**</span> Lists for various categories like anime, manga, and movies with hover effects.
+- <span style="color:lightblue">**Custom Search:**</span> A search bar is included for finding items by name.
 
 ## Technologies Used
-- **HTML5:** Structure and layout.
-- **CSS3/Tailwind CSS:** Styling and responsiveness.
-- **JavaScript:** Functionality and interactivity.
-- **Swiper.js:** For creating the slider/carousel.
-- **Remixicon:** Icons for UI elements.
+- <span style="color:lightblue">**HTML5:**</span> Structure and layout.
+- <span style="color:lightblue">**CSS3/Tailwind CSS:**</span> Styling and responsiveness.
+- <span style="color:lightblue">**JavaScript:**</span> Functionality and interactivity.
+- <span style="color:lightblue">**Swiper.js:**</span> For creating the slider/carousel.
+- <span style="color:lightblue">**Remixicon:**</span> Icons for UI elements.
 
 ## Setup Instructions
 
