@@ -22,3 +22,19 @@ This is a web project that includes an interactive website featuring different c
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/your-repo.git
+
+2. Navigate to the project directory:
+   ```bash
+   cd your-repo
+3. Open index.html in your browser to view the site:
+   ```bash
+   open index.html
+
+## File Structure
+.
+├── index.html      # Main HTML file
+├── app.js          # JavaScript functionality for the webpage
+├── anime/          # Folder containing anime images
+├── manga/          # Folder containing manga images
+├── movie/          # Folder containing movie images
+└── styles/         # CSS styles (if any)
