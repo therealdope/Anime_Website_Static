@@ -31,10 +31,10 @@ This is a web project that includes an interactive website featuring different c
    open index.html
 
 ## File Structure
-- .
-- ├── index.html      # Main HTML file
-- ├── app.js          # JavaScript functionality for the webpage
-- ├── anime/          # Folder containing anime images
-- ├── manga/          # Folder containing manga images
-- ├── movie/          # Folder containing movie images
-- └── styles/         # CSS styles (if any)
+.<br>
+├── index.html      # Main HTML file<br>
+├── app.js          # JavaScript functionality for the webpage<br>
+├── anime/          # Folder containing anime images<br>
+├── manga/          # Folder containing manga images<br>
+├── movie/          # Folder containing movie images<br>
+└── styles/         # CSS styles (if any)<br>
