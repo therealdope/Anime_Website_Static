@@ -4,8 +4,8 @@
 This is a web project that includes an interactive website featuring different categories such as anime, manga, and movies. The site utilizes responsive design, features a dark mode toggle, and incorporates an autoplaying Swiper slider for news content.
 
 ## Features
-- <span style="color:lightblue">**Dark Mode:**</span> Users can toggle between light and dark themes.
-- <span style="color:lightblue">**Snowflake Animation:**</span> A fun snowflake animation can be toggled on or off.
+- <span style="color:blue">**Dark Mode:**</span> Users can toggle between light and dark themes.
+- <span style="color:blue">**Snowflake Animation:**</span> A fun snowflake animation can be toggled on or off.
 - <span style="color:lightblue">**Swiper Slider:**</span> A carousel slider for displaying the latest news.
 - <span style="color:lightblue">**Anime, Manga, and Movie Listings:**</span> Lists for various categories like anime, manga, and movies with hover effects.
 - <span style="color:lightblue">**Custom Search:**</span> A search bar is included for finding items by name.
