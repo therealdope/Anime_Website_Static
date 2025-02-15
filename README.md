@@ -1,5 +1,8 @@
 # My Web Project
 
+[![🎭 Anime Website](https://img.shields.io/badge/🎭-Visit%20Anime%20Website-red)](https://therealdope.github.io/Anime_Website_Static/)
+
+
 ## Description
 This is a web project that includes an interactive website featuring different categories such as anime, manga, and movies. The site utilizes responsive design, features a dark mode toggle, and incorporates an autoplaying Swiper slider for news content.
 
